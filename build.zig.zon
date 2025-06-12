@@ -1,0 +1,16 @@
+.{
+    .name = .dos_like_voxel,
+    .fingerprint = 0x54acc3b72540ab79,
+    .version = "0.0.0",
+    .dependencies = .{
+        .dos = .{
+            .url = "https://github.com/mattiasgustavsson/dos-like/archive/07d9424d1fba9bd6fb3385430a9c389aa6aca6bf.zip",
+            .hash = "N-V-__8AAEjwqABRBTb52JlEXkJRIpN2HvlKJU7Z6afv4Z1W",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}
