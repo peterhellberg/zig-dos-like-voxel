@@ -17,6 +17,8 @@ Color                 | Height
 
 These images are used for the voxel effect.
 
+![CRT](files/CRT.png)
+
 ## Requirements
 
 A fairly recent version of [Zig master](https://ziglang.org/download/#release-master)
