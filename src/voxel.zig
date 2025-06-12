@@ -8,19 +8,18 @@
 //                     / Peter Hellberg
 
 const std = @import("std");
-const mem = std.mem;
 
 const dos = @cImport({
     @cInclude("dos.h");
 });
 
 const Cam = struct {
-    x: f32 = mem.zeroes(f32),
-    y: f32 = mem.zeroes(f32),
-    height: f32 = mem.zeroes(f32),
-    angle: f32 = mem.zeroes(f32),
-    horizon: f32 = mem.zeroes(f32),
-    distance: f32 = mem.zeroes(f32),
+    x: f32,
+    y: f32,
+    height: f32,
+    angle: f32,
+    horizon: f32,
+    distance: f32,
 };
 
 pub export fn dosmain() c_int {
