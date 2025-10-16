@@ -4,8 +4,8 @@
     .version = "0.0.0",
     .dependencies = .{
         .dos = .{
-            .url = "https://github.com/mattiasgustavsson/dos-like/archive/07d9424d1fba9bd6fb3385430a9c389aa6aca6bf.zip",
-            .hash = "N-V-__8AAEjwqABRBTb52JlEXkJRIpN2HvlKJU7Z6afv4Z1W",
+            .url = "https://github.com/mattiasgustavsson/dos-like/archive/ff103e4f58b4e707acb754a335bc43ee88c3ea9f.zip",
+            .hash = "N-V-__8AAP36qAAzOblQpGO4cHRqVAjt9lJ-lasAnOemFi3Y",
         },
     },
     .paths = .{
