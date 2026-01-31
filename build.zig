@@ -18,18 +18,20 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
-    exe.addCSourceFile(.{
+    const mod = exe.root_module;
+
+    mod.addCSourceFile(.{
         .file = dos.path("source/dos.c"),
     });
 
-    exe.addIncludePath(dos.path("source"));
+    mod.addIncludePath(dos.path("source"));
 
-    exe.linkSystemLibrary("SDL2");
-    exe.linkSystemLibrary("GLEW");
-    exe.linkSystemLibrary("pthread");
+    mod.linkSystemLibrary("SDL2", .{});
+    mod.linkSystemLibrary("GLEW", .{});
+    mod.linkSystemLibrary("pthread", .{});
 
     if (target.result.os.tag == .macos) {
-        exe.linkFramework("OpenGL");
+        mod.linkFramework("OpenGL", .{});
     }
 
     b.installArtifact(exe);
