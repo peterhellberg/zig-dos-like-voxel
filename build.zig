@@ -24,7 +24,11 @@ pub fn build(b: *std.Build) void {
         .file = dos.path("source/dos.c"),
     });
 
-    mod.addIncludePath(dos.path("source"));
+    mod.addImport("dos", b.addTranslateC(.{
+        .root_source_file = dos.path("source/dos.h"),
+        .target = target,
+        .optimize = optimize,
+    }).createModule());
 
     mod.linkSystemLibrary("SDL2", .{});
     mod.linkSystemLibrary("GLEW", .{});

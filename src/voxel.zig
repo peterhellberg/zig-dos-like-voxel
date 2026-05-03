@@ -12,9 +12,7 @@ const std = @import("std");
 const sin = std.math.sin;
 const cos = std.math.cos;
 
-const dos = @cImport({
-    @cInclude("dos.h");
-});
+const dos = @import("dos");
 
 const Cam = struct {
     x: f32,
